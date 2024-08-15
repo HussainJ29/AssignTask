@@ -18,16 +18,18 @@ body {
 .square {
     width: 50%;
     height: 50%;
-    transition: transform 0.5s ease;
-    transform-origin: center center;
+    transition: transform 2s ease;
+    transform-origin: center;
 }
 
 .red {
     background: linear-gradient(45deg, #ff0000, #cc0000);
+    
 }
 
 .yellow {
     background: linear-gradient(45deg, #ffff00, #cccc00);
+    
 }
 
 .green {
@@ -36,33 +38,34 @@ body {
 
 .blue {
     background: linear-gradient(45deg, #0000ff, #0000cc);
+    
 }
 
 .container:hover .square {
-    transform: rotate(90deg);
-    transition: transform 0.5s ease;
+    transition: transform 1.2s ease;
 }
 
 .container:hover .red {
     transform-origin: top left;
-    background: linear-gradient(45deg, #0000ff, #0000cc);
-    border-radius: 10px;
+    transform: rotate(-180deg);
+    border-radius: 30px;
 }
 
 .container:hover .yellow {
     transform-origin: top right;
-    background: linear-gradient(45deg, #00ff00, #00cc00);
-    border-radius: 10px;
+    transform: rotate(180deg);
+    border-radius: 30px;
 }
 
 .container:hover .green {
     transform-origin: bottom left;
-    background: linear-gradient(45deg, #ffff00, #cccc00);
-    border-radius: 10px;
+    transform: rotate(180deg);
+    transform-style: flat;
+    border-radius: 30px;
 }
 
 .container:hover .blue {
     transform-origin: bottom right;
-    background: linear-gradient(45deg, #ff0000, #cc0000);
-    border-radius: 10px;
+    transform: rotate(-180deg);
+    border-radius: 30px;
 }
