@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.square {
+    width: 50%;
+    height: 50%;
+    transition: transform 2s ease;
+    transform-origin: center;
+}
+
+.red {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+    
+}
+
+.yellow {
+    background: linear-gradient(45deg, #ffff00, #cccc00);
+    
+}
+
+.green {
+    background: linear-gradient(45deg, #00ff00, #00cc00);
+}
+
+.blue {
+    background: linear-gradient(45deg, #0000ff, #0000cc);
+    
+}
+
+.container:hover .square {
+    transition: transform 1.2s ease;
+}
+
+.container:hover .red {
+    transform-origin: top left;
+    transform: rotate(-180deg);
+    border-radius: 30px;
+}
+
+.container:hover .yellow {
+    transform-origin: top right;
+    transform: rotate(180deg);
+    border-radius: 30px;
+}
+
+.container:hover .green {
+    transform-origin: bottom left;
+    transform: rotate(180deg);
+    transform-style: flat;
+    border-radius: 30px;
+}
+
+.container:hover .blue {
+    transform-origin: bottom right;
+    transform: rotate(-180deg);
+    border-radius: 30px;
+}
